@@ -1,15 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Anna's Wormhole</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <script src="js/space-ship.js"></script>
-    <script src="js/game.js"></script>
-    <script src="js/event.js"></script>
-    <script src="js/UI.js"></script>
+
+    <div class="header">
+        <h1>WELCOME TO THE OREGON TRAIL</h1>
+        <h2>SHIT IS ABOUT TO GET REAL</h2>
+    </div>
+
+    <div id="home"></div>
+    <div id="journey">
+
+      <div id="stats-area">
+        <div class="stat">Day <span id="stat-day" class="stat-value"></span></div>
+        <div class="stat">Distance <span id="stat-distance" class="stat-value"></span></div>
+        <div class="stat">Crew <span id="stat-crew" class="stat-value"></span></div>
+        <div class="stat">Oxen <span id="stat-oxen" class="stat-value"></span></div>
+        <div class="stat">Food <span id="stat-food" class="stat-value"></span></div>
+        <div class="stat">Money <span id="stat-money" class="stat-value"></span></div>
+        <div class="stat">Firepower <span id="stat-firepower" class="stat-value"></span></div>
+        <div class="stat">Weight <span id="stat-weight" class="stat-value"></span><span id="stat-capacity" class="stat-value"></span></div>
+      </div>
+
+      <div class="updates-area" id="updates-area"></div>
+
+      <div id="shop" class="hidden">
+        <div id="prods">
+        </div>
+        <button>Leave shop</button>
+      </div>
+
+      <div id="attack" class="hidden">
+        <div id="attack-description"></div>
+        <button id="fight">Fight</button>
+        <button id="runaway">Run away</button>
+      </div>
+
+      <div id="progress-area">
+        <img id="caravan" src="images/Wagon.png" />
+        <img id="trees" src="images/Trees.png" />
+      </div>
+    </div>
+
+    <div id="event"></div>
+
+
+    <script src="JavaScript/space-ship.js"></script>
+    <script src="JavaScript/game.js"></script>
+    <script src="JavaScript/event.js"></script>
+    <script src="JavaScript/UI.js"></script>
+
+    <script>
+      class Apple {
+        constructor(size, color) {
+          this.size = size
+          this.color = color
+        }
+      }
+      class Pastry extends Apple {
+        constructor(crispiness) {
+          super(21, 'chocolate')
+          this.crispiness = crispiness
+        }
+      }
+      const apple = new Apple(33, 'red')
+      console.log(apple)
+
+      const biscotti = new Pastry(999)
+      console.log(biscotti)
+    </script>
 </body>
+
 </html>
